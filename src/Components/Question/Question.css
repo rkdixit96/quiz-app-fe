@@ -1,0 +1,10 @@
+.Question{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.question-statement{
+    display: flex;
+    background-color: #44c7f5;
+}

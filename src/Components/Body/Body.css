@@ -1,5 +1,15 @@
 .Body{
     background-color: #16214e;
     display: flex;
-    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
+
+.center-card{
+    display: flex;
+    flex-direction: row;
+    width:50%;
+    height: 50%;
+    
 }
