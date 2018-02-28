@@ -17,7 +17,7 @@ class Body extends Component {
     };
     this.state = {
       page: 'login',
-      username: 'default',
+      userName: 'default',
       questions: 'null,'
     };
   }
@@ -57,13 +57,13 @@ class Body extends Component {
               },
             ).then(() => {
               this.setState({
-                username: userdata,
+                userName: userdata,
                 page: 'questions',
               });
             });
           } else {
             this.setState({
-              username: userdata,
+              userName: userdata,
               page: 'questions',
             });
           }
@@ -86,8 +86,9 @@ class Body extends Component {
     if (this.state.page === 'questions') {
       return (
         <div>
-          {this.state.username}
-          <QuestionContainer questions={this.state.questions} />
+          {this.state.userName}
+          <QuestionContainer questions={this.state.questions} userName={this.state.userName} />
+          <input type="button" value="Calculate Score" />
         </div>
       );
     }

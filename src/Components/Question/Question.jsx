@@ -21,10 +21,11 @@ class Question extends Component {
       question: props.question,
       options: props.options,
       id: props.id,
+      userName: props.userName,
     };
   }
 
-  populateOptions = (options) => options.map(value => <Option text={value[Object.keys(value)[0]]}  />);
+  populateOptions = (options) => options.map(value => <Option text={value[Object.keys(value)[0]]} optionId={Object.keys(value)[0]} questionId={this.state.id}  userName={this.state.userName}/>);
   
 
 

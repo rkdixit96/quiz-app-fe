@@ -12,7 +12,7 @@ class LoginForm extends Component {
       text: 'default',
     };
     this.state = {
-      username: "null",
+      username: "nulllllll",
     };
   }
 
@@ -27,6 +27,12 @@ class LoginForm extends Component {
 
   clickHandler=()=>{
     this.props.getLoginData(this.state.username);
+    console.log('username', this.state.username);
+    console.log("adding users");
+    fetch('/users',{
+      method: 'POST',
+      body: this.state.username,
+    })
   }
 
   render() {

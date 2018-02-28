@@ -15,11 +15,12 @@ class QuestionContainer extends Component {
     };
     this.state = {
       text: props.text,
+      userName: props.userName,
     };
   }
 
 
-  populateQuestions = questions => questions.map(value => <Question question={value.question} options={value.options} id={value.id}  />);
+  populateQuestions = questions => questions.map(value => <Question question={value.question} options={value.options} id={value.id} userName={this.state.userName}  />);
 
 
   render() {
