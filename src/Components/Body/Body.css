@@ -1,0 +1,5 @@
+.Body{
+    background-color: #16214e;
+    display: flex;
+    flex-grow: 1;
+}
